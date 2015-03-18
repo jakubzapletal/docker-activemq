@@ -1,6 +1,7 @@
 # ActiveMQ dockerfile
 
-This image contains a default configuration of ActiveMQ based on [jakubzapletal/ubuntu:14.04](https://github.com/jakubzapletal/docker-ubuntu/tree/14.04).
+This image contains a default configuration of ActiveMQ based on [jakubzapletal/java:jdk-8-oracle](https://github.com/jakubzapletal/docker-java/tree/jdk-8-oracle).
+Comes bundled with [hawtio](http://hawt.io).
 
 ## Using the Docker Hub
  
@@ -10,7 +11,7 @@ The container exposes the following ports:
 - `61612`: Stomp
 - `61613`: Stomp over NIO
 - `61616`: Broker URI
-- `8161`: Web Console
+- `8161`: Web interface - [http://localhost:8161/admin](http://localhost:8161/admin), [http://localhost:8161/hawtio](http://localhost:8161/hawtio)
 
 There is the prepared volume `/data` for saving data into a local machine.
 
