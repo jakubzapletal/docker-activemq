@@ -12,7 +12,7 @@ ADD scripts/activemq.xml apache-activemq-5.10.0/conf/activemq.xml
 # Install hawtio
 RUN \
     mkdir apache-activemq-5.10.0/webapps/hawtio && \
-    curl https://oss.sonatype.org/content/repositories/public/io/hawt/hawtio-default/1.4.45/hawtio-default-1.4.45.war >> apache-activemq-5.10.0/webapps/hawtio/hawtio-default-1.4.45.war && \
+    curl -L https://oss.sonatype.org/content/repositories/public/io/hawt/hawtio-default/1.4.45/hawtio-default-1.4.45.war >> apache-activemq-5.10.0/webapps/hawtio/hawtio-default-1.4.45.war && \
     cd apache-activemq-5.10.0/webapps/hawtio && \
     jar -xf hawtio-default-1.4.45.war && \
     rm hawtio-default-1.4.45.war
